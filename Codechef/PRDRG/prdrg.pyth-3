@@ -1,0 +1,12 @@
+# cook your dish here
+t,*d=map(int,input().split())
+for i in range(len(d)):
+    n=d[i]
+    a=[0]*(n+1)
+    a[0]=1
+    a[1]=1
+    for j in range(2,n+1):
+        a[j]=a[j-1]+2*a[j-2]
+    x=a[n-1]
+    y=2**n
+    print(x,y,end=" ")
